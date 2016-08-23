@@ -7,10 +7,18 @@ export const receivePosts = (subreddit, posts) => {
   }
 }
 
-export function fetchPosts (subreddit) {
-  return (dispatch) => {
+export const setSubreddit = subredditSearch => {
+  return {
+    type: 'SUBREDDIT_SEARCH',
+    subredditSearch
+  }
+}
+
+export function fetchPosts () {
+  return (dispatch, getState) => {
+    const subreddit = getState().search
     return request
-      .get(`http://www.reddit.com/r/${subreddit}.json`)
+      .get(`https://www.reddit.com/r/${subreddit}.json`)
       .end((err, res) => {
         if (err) {
           console.error(err.message)
