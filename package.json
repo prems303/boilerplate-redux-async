@@ -35,5 +35,8 @@
       "es2015",
       "react"
     ]
+  },
+  "dependencies": {
+    "unix-timestamp": "^0.2.0"
   }
 }

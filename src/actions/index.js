@@ -14,6 +14,12 @@ export const setSubreddit = subredditSearch => {
   }
 }
 
+export const stuff = () => {
+  return {
+    type: ''
+  }
+}
+
 export function fetchPosts () {
   return (dispatch, getState) => {
     const subreddit = getState().search
