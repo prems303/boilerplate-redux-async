@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 
 import Post from './Post'
 
-const Subreddit = ({subreddits, loading}) => (
+const Subreddit = ({subreddits, loading, warning}) => (
   <div>
     {!loading && subreddits.map((post, i) =>
       <Post
@@ -12,6 +12,7 @@ const Subreddit = ({subreddits, loading}) => (
         content={post.selftext.substring(0, 120)}
       />
     )}
+    {warning && <h1>GAME OVER, MAN. GG.</h1>}
     {loading && <img src='../../dankLoader.gif' />}
   </div>
 )
