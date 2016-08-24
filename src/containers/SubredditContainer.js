@@ -4,6 +4,7 @@ import Subreddit from '../components/Subreddit'
 
 const mapStateToProps = (state) => {
   return {
+    loading: state.load,
     subreddits: state.subreddits
   }
 }

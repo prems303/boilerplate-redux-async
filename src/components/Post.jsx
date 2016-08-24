@@ -1,7 +1,11 @@
 import React, {PropTypes} from 'react'
 
-const Post = ({title}) => (
-  <div>{title}</div>
+const Post = ({title, date, content}) => (
+  <div>
+    <h1>{title}</h1><br/>
+    <h3>{content}</h3><br/><br/>
+    {date}<br/>
+  </div>
 )
 
 Post.propTypes = {
